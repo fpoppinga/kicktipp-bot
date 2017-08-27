@@ -4,6 +4,6 @@
     "module": "commonjs",
     "strict": true,
     "outDir": "dist",
-    "lib": ["es6"]
+    "lib": ["es6", "dom.iterable", "DOM"]
   }
 }
