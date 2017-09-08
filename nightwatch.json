@@ -17,7 +17,7 @@
       "desiredCapabilities": {
         "browserName": "chrome",
         "chromeOptions" : {
-          "args" : ["--no-sandbox"]
+          "args" : ["--no-sandbox", "--headless", "--window-size=1920,1080"]
         },
         "acceptSslCerts": true
       }
