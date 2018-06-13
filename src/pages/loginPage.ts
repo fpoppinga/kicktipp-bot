@@ -11,7 +11,7 @@ const loginCommands = {
 
 module.exports = {
     url: function(): string {
-        return `${this.api.launch_url}${this.api.globals.gameSlug}/login`
+        return `${this.api.launch_url}${this.api.globals.gameSlug}/profil/login`
     },
     commands: [loginCommands],
     elements: {

@@ -12,16 +12,22 @@ const predictionCommands = {
         const homeSelector = '[name*="heimTipp"]';
         const awaySelector = '[name*="gastTipp"]';
 
+        this.waitForElementPresent("tbody .datarow");
         for (let i = 0; i < predictions.length; i++) {
             const prediction = predictions[i];
             const elementSelector = `tbody .datarow:nth-of-type(${i + 1})`;
 
-            this.waitForElementPresent(elementSelector);
-            this.moveToElement(elementSelector, 0, 0);
-            this.clearValue(elementSelector + " " + homeSelector);
-            this.clearValue(elementSelector + " " + awaySelector);
-            this.setValue(elementSelector + " " + homeSelector, prediction.home.toFixed(0));
-            this.setValue(elementSelector + " " + awaySelector, prediction.away.toFixed(0));
+            this.isVisible(elementSelector + " .nichttippbar", (visible) => {
+                if (visible) return;
+
+                const homeInputSelector = elementSelector + homeSelector;
+                const awayInputSelector = elementSelector + awaySelector;
+
+                this.clearValue(homeInputSelector);
+                this.clearValue(awayInputSelector);
+                this.setValue(homeInputSelector, prediction.home.toFixed(0));
+                this.setValue(awayInputSelector, prediction.away.toFixed(0));
+            });
         }
 
         this.click("@submitBtn");

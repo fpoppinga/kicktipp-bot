@@ -21,6 +21,19 @@
         },
         "acceptSslCerts": true
       }
+    },
+    "window" : {
+      "launch_url" : "https://www.kicktipp.de/",
+      "selenium_port"  : 9515,
+      "selenium_host"  : "localhost",
+      "default_path_prefix": "",
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions" : {
+          "args" : ["--no-sandbox", "--window-size=1920,1080"]
+        },
+        "acceptSslCerts": true
+      }
     }
   }
 }
