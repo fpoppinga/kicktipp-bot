@@ -1,5 +1,7 @@
+import {NightwatchAPI} from 'nightwatch';
+
 const homepageCommands = {
-    assertLoginSuccessful: function(this: NightWatchClient) {
+    assertLoginSuccessful: function(this: NightwatchAPI) {
         return this.waitForElementVisible("@successBox");
     }
 };

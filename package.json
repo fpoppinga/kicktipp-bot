@@ -11,11 +11,12 @@
   "scripts": {
     "build": "tsc",
     "nightwatch": "nightwatch",
-    "start": "yarn build && yarn run nightwatch"
+    "start": "yarn build && yarn run nightwatch",
+    "docker": "yarn build && docker build"
   },
   "devDependencies": {
     "@types/dotenv": "^4.0.1",
-    "@types/nightwatch": "^0.9.0",
+    "@types/nightwatch": "^0.9.8",
     "@types/node": "^8.0.25",
     "typescript": "^2.4.2"
   }

@@ -6,9 +6,12 @@ module.exports = {
         gameSlug: process.env.GAME_SLUG,
         waitForConditionTimeout: 15000,
     },
+    'window': {
+        gameSlug: process.env.GAME_SLUG,
+        waitForConditionTimeout: 15000
+    },
 
     before: function(done: Function) {
-        console.log("Before!");
         chromedriver.start();
         done();
     },

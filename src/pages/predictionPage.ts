@@ -1,14 +1,14 @@
 import {GameResult} from '../predictor/predictor';
-import {privateDecrypt} from 'crypto';
+import {NightwatchAPI, NightwatchCallbackResult} from 'nightwatch';
 
 const predictionCommands = {
-    verifyContent: function(this: NightWatchClient) {
+    verifyContent: function(this: NightwatchAPI) {
         return this.waitForElementVisible("@predictionForm")
             .waitForElementVisible("@predictionContent")
             .waitForElementVisible("@submitBtn");
     },
 
-    fillInPredictions: function(this: NightWatchClient, predictions: GameResult[]) {
+    fillInPredictions: function(this: NightwatchAPI, predictions: GameResult[]) {
         const homeSelector = '[name*="heimTipp"]';
         const awaySelector = '[name*="gastTipp"]';
 
@@ -17,7 +17,7 @@ const predictionCommands = {
             const prediction = predictions[i];
             const elementSelector = `tbody .datarow:nth-of-type(${i + 1})`;
 
-            this.isVisible(elementSelector + " .nichttippbar", (visible) => {
+            this.isVisible(elementSelector + " .nichttippbar", (visible: NightwatchCallbackResult) => {
                 if (visible) return;
 
                 const homeInputSelector = elementSelector + homeSelector;

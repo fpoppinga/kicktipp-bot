@@ -1,5 +1,7 @@
+import {NightwatchAPI} from 'nightwatch';
+
 const loginCommands = {
-    doLogin: function(this: NightWatchClient) {
+    doLogin: function(this: NightwatchAPI) {
         return this.waitForElementVisible("@login")
             .waitForElementVisible("@password")
             .waitForElementVisible("@loginSubmitBtn")
