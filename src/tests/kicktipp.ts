@@ -21,7 +21,7 @@ module.exports = {
                 .verifyContent();
 
             const quotes = await execute(browser, function () {
-                return [...document.querySelectorAll("tbody .datarow")]
+                return [...document.querySelectorAll("#tippabgabeSpiele tbody .datarow")]
                     .map(node => [...node.querySelectorAll(".kicktipp-wettquote")]
                         .map(q => q.textContent)
                         .map(text => parseFloat((text || "").replace(",", "."))))

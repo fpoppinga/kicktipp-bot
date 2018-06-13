@@ -12,7 +12,7 @@
     "build": "tsc",
     "nightwatch": "nightwatch",
     "start": "yarn build && yarn run nightwatch",
-    "docker": "yarn build && docker build"
+    "docker": "yarn build && docker build ."
   },
   "devDependencies": {
     "@types/dotenv": "^4.0.1",
