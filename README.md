@@ -1,3 +1,6 @@
+# Update FIFA World Cup 2018 
+I tested this bot briefly in the official game `GAME_SLUG=wm18-tippspiel`. It seems to work, but it may or may not break in the future. Don't hesitate to file a bug, as I will probably not be using it actively. 
+
 # Usage
 
 1. Run `> yarn install`. 
@@ -9,3 +12,7 @@
   ```
 3. Run `> yarn start` and enjoy.
 
+# Pro Tips
+* If you don't know, why the bot fails, run it in window mode: 
+`yarn start --env window`
+* Make sure, you have answered all non-result questions before starting the bot (e.g. "Who will become FIFA World Champion 2018?" - the bot does not know which team will dominate (although it is in favor of Germany...) 
