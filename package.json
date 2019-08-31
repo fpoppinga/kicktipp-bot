@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "chromedriver": "^2.31.0",
+    "chromedriver": "^76.0.1",
     "dotenv": "^4.0.0",
-    "nightwatch": "^0.9.16"
+    "nightwatch": "^0.9.21"
   },
   "scripts": {
     "build": "tsc",
@@ -15,9 +15,9 @@
     "docker": "yarn build && docker build ."
   },
   "devDependencies": {
-    "@types/dotenv": "^4.0.1",
-    "@types/nightwatch": "^0.9.8",
-    "@types/node": "^8.0.25",
-    "typescript": "^2.4.2"
+    "@types/dotenv": "^6.1.1",
+    "@types/nightwatch": "^1.1.1",
+    "@types/node": "^12.7.3",
+    "typescript": "^3.6.2"
   }
 }
