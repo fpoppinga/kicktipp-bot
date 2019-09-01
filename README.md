@@ -16,3 +16,7 @@ I tested this bot briefly in the official game `GAME_SLUG=wm18-tippspiel`. It se
 * If you don't know, why the bot fails, run it in window mode: 
 `yarn start --env window`
 * Make sure, you have answered all non-result questions before starting the bot (e.g. "Who will become FIFA World Champion 2018?" - the bot does not know which team will dominate (although it is in favor of Germany...) 
+
+# Feature Requests
+* add a smarter predictor implementation, which does not rely on the btwin quota, so it can predict e.g. the whole Bundesliga season in one session
+* dump nightwatch for something nicer, e.g. `puppeteer`.
